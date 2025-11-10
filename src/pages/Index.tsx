@@ -7,9 +7,12 @@ import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import { Helmet } from "react-helmet-async";
+
 
 const Index = () => {
   return (
+    
     <div className="min-h-screen">
       <Navbar />
       <Hero />
