@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* TOMATO Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    /* Tomato Red as Primary */
+    --primary: 2 76% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Charcoal as Secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 11%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent Yellow */
+    --accent: 44 100% 64%;
+    --accent-foreground: 0 0% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 2 76% 58%;
+
+    --radius: 0.75rem;
+    
+    /* Custom TOMATO tokens */
+    --tomato-red: 2 76% 58%;
+    --tomato-red-dark: 2 76% 48%;
+    --accent-yellow: 44 100% 64%;
+    --charcoal: 0 0% 11%;
+    --light-bg: 0 0% 98%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(2, 76%, 58%) 0%, hsl(2, 76%, 48%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(44, 100%, 64%) 0%, hsl(44, 100%, 74%) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 20px rgba(231, 73, 70, 0.1);
+    --shadow-hover: 0 8px 30px rgba(231, 73, 70, 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 2 76% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 44 100% 64%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 2 76% 58%;
+    
+    /* Dark mode custom tokens */
+    --tomato-red: 2 76% 58%;
+    --tomato-red-dark: 2 76% 48%;
+    --accent-yellow: 44 100% 64%;
+    --charcoal: 0 0% 9%;
+    --light-bg: 0 0% 14%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer utilities {
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent;
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-shadow-hover:hover {
+    box-shadow: var(--shadow-hover);
+  }
+}
