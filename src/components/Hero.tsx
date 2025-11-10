@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-16">
       <div className="absolute inset-0 z-0">
-        <img src={heroFood} alt="food" className="w-full h-full object-cover" />
+        <img src={heroFood} alt="Assorted popular dishes ready for fast delivery by TOMATO" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/50"></div>
       </div>
 

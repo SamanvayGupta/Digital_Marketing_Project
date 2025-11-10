@@ -34,7 +34,7 @@ const Categories = () => {
               <div className="relative overflow-hidden rounded-2xl aspect-square hover-lift card-shadow card-shadow-hover">
                 <img
                   src={category.image}
-                  alt={category.name}
+                  alt={`${category.name} in your area - order with TOMATO`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
